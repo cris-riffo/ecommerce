@@ -1,5 +1,7 @@
 import React from  'react'
+import { ThemeProvider } from '@material-ui/core/styles'
 
+import {theme} from '../../themes'
 import { ProductCard } from  './ProductCard'
 
 export default {
@@ -7,7 +9,7 @@ export default {
     Component: ProductCard
 }
 
-const Template = (args) => <ProductCard {...args} />
+const Template = (args) => <ThemeProvider theme={theme}><ProductCard {...args} /> </ThemeProvider>
 
 export const Default = Template.bind({});
 Default.args = {
