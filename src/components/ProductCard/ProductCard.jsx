@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -6,47 +7,44 @@ import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 import StarIcon from '@material-ui/icons/Star';
+import useStyles from './ProductCard.style';
 
-const useStyles = makeStyles({
-    root: {
-        maxWidth: 281,
-    },
-    media: {
-        height: 177,
-    },
-    cardArea: {
-        backgroundColor: 'none'
-    },
-    cardActions: {
-        backgroundColor: 'none'
-    }
-});
 
-export const ProductCard = () => {
+export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, buttonText, linkText, onClick}) => {
     const classes = useStyles();
     return <Card component={Grid} container elevation={0} className={classes.root} direction="column" >
-
-        <CardActionArea className={classes.cardArea}>
-            <CardMedia className={classes.media} image='https://www.noelleeming.co.nz/shop/render-image/products/183/183120.309.200.jpg' />
-            <Typography variant="h6">Endeavour HDMI 2.1 Cable 2m</Typography>
-
+        <CardActionArea  className={classes.cardArea} >
+            <CardMedia className={classes.media} image={imgSrc} />
+            <Typography variant="h6">{title}</Typography>
             <Grid container direction="column">
-                <Typography variant="caption">126082</Typography>
+                <Typography variant="caption">{code}</Typography>
                 <Grid container item direction="row" alignItems="center">
-                    <Rating name="read-only" value={4} readOnly />
-                    <Typography variant="caption">(3)</Typography>
+                    <Rating name="read-only" value={rating} readOnly />
+                    <Typography variant="caption">({reviewsCount})</Typography>
                 </Grid>
-                <Typography variant="body1">49.00</Typography>
+                <Typography variant="body1">{price}</Typography>
             </Grid>
         </CardActionArea>
         <CardActions className={classes.cardActions}>
         <Grid container direction="column" alignItems="flex-start">
-            <Button variant="contained" color="secondary">Buy</Button>
-            <Button startIcon={<StarIcon />} >add to whishlist </Button>
+            <Button variant="contained" color="secondary" onClick={onClick}>{buttonText}</Button>
+            <Button startIcon={<StarIcon />} >{linkText}</Button>
             </Grid>
         </CardActions>
     </Card>
-
 }
+
+ProductCard.propTypes = {
+    imgSrc: PropTypes.string,
+    title: PropTypes.string,
+    code: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    buttonText: PropTypes.oneOf(["Buy", "Sell"]),
+    reviewsCount: PropTypes.number,
+    user: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        profession: PropTypes.arrayOf(PropTypes.object)
+    }),
+    onClick: PropTypes.func,
+};
