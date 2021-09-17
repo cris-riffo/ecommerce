@@ -16,7 +16,7 @@ export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, b
     return <Card component={Grid} container elevation={0} className={classes.root} direction="column" >
         <CardActionArea  className={classes.cardArea} >
             <CardMedia className={classes.media} image={imgSrc} />
-            <Typography variant="h6">{title}</Typography>
+            <Typography variant="h6" data-testid="product-title-id">{title}</Typography>
             <Grid container direction="column">
                 <Typography variant="caption">{code}</Typography>
                 <Grid container item direction="row" alignItems="center">
@@ -28,7 +28,7 @@ export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, b
         </CardActionArea>
         <CardActions className={classes.cardActions}>
         <Grid container direction="column" alignItems="flex-start">
-            <Button variant="contained" color="secondary" onClick={onClick}>{buttonText}</Button>
+            <Button data-testid="onclick-test-id" variant="contained" color="secondary" onClick={onClick}>{buttonText}</Button>
             <Button startIcon={<StarIcon />} >{linkText}</Button>
             </Grid>
         </CardActions>
