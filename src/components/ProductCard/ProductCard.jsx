@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,6 +14,9 @@ import useStyles from './ProductCard.style';
 
 export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, buttonText, linkText, onClick}) => {
     const classes = useStyles();
+    const [internalButtonText, setInternalButtonText] = useState()
+
+
     return <Card component={Grid} container elevation={0} className={classes.root} direction="column" >
         <CardActionArea  className={classes.cardArea} >
             <CardMedia className={classes.media} image={imgSrc} />
