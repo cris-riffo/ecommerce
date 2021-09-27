@@ -14,8 +14,14 @@ import useStyles from './ProductCard.style';
 
 export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, buttonText, linkText, onClick}) => {
     const classes = useStyles();
-    const [internalButtonText, setInternalButtonText] = useState()
+    const [internalButtonText, setInternalButtonText] = useState('Test')
 
+
+const onClickWithUseState = () => {
+    onClick();
+    setInternalButtonText("Clicked")
+
+}
 
     return <Card component={Grid} container elevation={0} className={classes.root} direction="column" >
         <CardActionArea  className={classes.cardArea} >
@@ -32,7 +38,7 @@ export const ProductCard = ({imgSrc, title, code, rating, reviewsCount, price, b
         </CardActionArea>
         <CardActions className={classes.cardActions}>
         <Grid container direction="column" alignItems="flex-start">
-            <Button data-testid="onclick-test-id" variant="contained" color="secondary" onClick={onClick}>{buttonText}</Button>
+            <Button data-testid="onclick-test-id" variant="contained" color="secondary" onClick={onClickWithUseState}>{internalButtonText}</Button>
             <Button startIcon={<StarIcon />} >{linkText}</Button>
             </Grid>
         </CardActions>
