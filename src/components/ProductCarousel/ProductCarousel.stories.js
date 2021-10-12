@@ -40,6 +40,76 @@ Default.args = {
   price: "1000",
   buttonText: 'Buy Me',
   linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
+},
+{
+  title: 'Kontrol Freek Battle Royale Black XBO',
+  imgSrc: "https://www.noelleeming.co.nz/shop/render-image/products/190/190260.309.200.jpg",
+  code: 'llsls', 
+  rating: 3,
+  reviewsCount: 4,
+  price: "1000",
+  buttonText: 'Buy Me',
+  linkText: "Go there"
 }
   ]
 }
