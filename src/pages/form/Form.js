@@ -12,8 +12,8 @@ const handleChange = event => {
 const handleSubmit = (event) => {
 // call api
 event.preventDefault();
-console.log('ref on submit', inputRef.current.value)
-}
+// console.log('ref on submit', inputRef.current.value)
+ }
 
 
 //  React.useEffect(() => {
