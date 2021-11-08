@@ -27,8 +27,8 @@ useEffect(() => {
         setResponse(prevState => ({...prevState, loading:  false}))
      }
 
- fetchUserData();
 }
+fetchUserData();
 })
 
 
