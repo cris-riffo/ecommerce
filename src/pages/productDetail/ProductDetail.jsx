@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { UserConsumer, UserContext } from  '../../context/usercontext'
 
-import { withUserContext } from '../../HOC/withUserContext'
+import { withUserContext } from '../../hoc/withUserContext'
 export const  ProductDetail = withUserContext((props) => {
 
   console.log('props', props)
